@@ -10,6 +10,7 @@ public interface APIServiceYandexPredictor {
     Call<ResponseData> predict(
             @Query("key") String key,
             @Query("q") String q,
-            @Query("lang") String lang
+            @Query("lang") String lang,
+            @Query("limit") int limit
     );
 }

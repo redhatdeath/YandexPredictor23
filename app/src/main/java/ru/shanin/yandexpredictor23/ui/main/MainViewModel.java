@@ -1,5 +1,6 @@
 package ru.shanin.yandexpredictor23.ui.main;
 
+import androidx.annotation.NonNull;
 import androidx.lifecycle.ViewModel;
 
 import retrofit2.Call;
@@ -18,13 +19,18 @@ public class MainViewModel extends ViewModel {
                 .predict(
                         APIConfigYandexPredictor.KEY,
                         inputText,
-                        "ru"
+                        "ru",
+                        5
                 );
         call.enqueue(new Callback<ResponseData>() {
             @Override
-            public void onResponse(Call<ResponseData> call, Response<ResponseData> response) {
+            public void onResponse(
+                    @NonNull Call<ResponseData> call,
+                    @NonNull Response<ResponseData> response
+            ) {
                 StringBuilder textWord = new StringBuilder();
                 try {
+                    assert response.body() != null;
                     for (String s : response.body().getText())
                         textWord.append("\t").append(s).append("\n");
                     MainFragment.updateText("Предиктор : \n" + textWord);
@@ -34,7 +40,10 @@ public class MainViewModel extends ViewModel {
             }
 
             @Override
-            public void onFailure(Call<ResponseData> call, Throwable t) {
+            public void onFailure(
+                    @NonNull Call<ResponseData> call,
+                    @NonNull Throwable t
+            ) {
             }
         });
     }
