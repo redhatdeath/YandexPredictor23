@@ -11,7 +11,6 @@ import ru.shanin.yandexpredictor23.app.AppStart;
 import ru.shanin.yandexpredictor23.data.ResponseData;
 
 public class MainViewModel extends ViewModel {
-
     public void getReport(String inputText) {
 
         Call<ResponseData> call = AppStart

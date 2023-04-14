@@ -7,6 +7,7 @@ public class ResponseData {
     private int pos;
     private String[] text;
 
+
     public boolean isEndOfWord() {
         return endOfWord;
     }

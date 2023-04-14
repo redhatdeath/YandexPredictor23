@@ -8,7 +8,6 @@ import ru.shanin.yandexpredictor23.api.config.APIServiceYandexPredictor;
 
 public class AppStart extends Application {
     private static APIServiceYandexPredictor service;
-
     @Override
     public void onCreate() {
         super.onCreate();

@@ -8,7 +8,6 @@ import ru.shanin.yandexpredictor23.ui.main.MainFragment;
 
 public class MainActivity extends AppCompatActivity {
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

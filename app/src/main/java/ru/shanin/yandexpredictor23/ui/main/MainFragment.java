@@ -22,8 +22,6 @@ public class MainFragment extends Fragment {
     private static TextView tv;
     private EditText et;
 
-
-
     public static MainFragment newInstance() {
         return new MainFragment();
     }
