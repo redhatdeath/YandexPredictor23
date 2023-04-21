@@ -5,7 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.main.MainFragment">
+    tools:context=".ui.predictor.PredictorFragment">
 
 
     <EditText
@@ -13,24 +13,28 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
+        android:layout_marginBottom="8dp"
+        android:autofillHints="name"
         android:gravity="center_horizontal"
+        android:inputType="text"
+        android:hint="@string/input_some_text"
         android:textSize="24sp"
         app:layout_constraintBottom_toTopOf="@+id/tv"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:hint=" input data "
-        android:autofillHints="name"
-        android:inputType="text" />
+        app:layout_constraintVertical_chainStyle="packed"
+        tools:hint=" input data " />
 
     <TextView
         android:id="@+id/tv"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
         android:gravity="center_horizontal"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/et"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/et"
         tools:text="Callback" />

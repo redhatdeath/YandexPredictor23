@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">YandexPredictor23</string>
+    <string name="empty"> Nothing input else… </string>
+    <string name="input_some_text"> Input some text… </string>
 </resources>

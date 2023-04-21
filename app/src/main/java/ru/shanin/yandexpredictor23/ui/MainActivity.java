@@ -1,10 +1,11 @@
-package ru.shanin.yandexpredictor23;
+package ru.shanin.yandexpredictor23.ui;
 
 import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import ru.shanin.yandexpredictor23.ui.main.MainFragment;
+import ru.shanin.yandexpredictor23.R;
+import ru.shanin.yandexpredictor23.ui.predictor.PredictorFragment;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -14,7 +15,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         if (savedInstanceState == null) {
             getSupportFragmentManager().beginTransaction()
-                    .replace(R.id.container, MainFragment.newInstance())
+                    .replace(R.id.container, PredictorFragment.newInstance())
                     .commitNow();
         }
     }
